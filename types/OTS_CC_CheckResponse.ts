@@ -36,6 +36,20 @@ export class PassFortWarning {
       provider_data: string;
       warnings: PassFortWarning[];
       errors: PassFortError[];
-      external_resources?: ExternalResource[];
-      result?: Result;
+      external_resources: ExternalResource[];
+      result: Result;
+  }
+
+  export enum DemoResultType {
+    // General
+    ANY = 'ANY',
+    ANY_CHARGE = 'ANY_CHARGE',
+    NO_MATCH = 'NO_MATCH',
+    EXTERNAL_RESOURCE_LINK = 'EXTERNAL_RESOURCE_LINK',
+    EXTERNAL_RESOURCE_EMBED = 'EXTERNAL_RESOURCE_EMBED',
+  
+    // Errors
+    ERROR_INVALID_CREDENTIALS = 'ERROR_INVALID_CREDENTIALS',
+    ERROR_ANY_PROVIDER_MESSAGE = 'ERROR_ANY_PROVIDER_MESSAGE',
+    ERROR_CONNECTION_TO_PROVIDER = 'ERROR_CONNECTION_TO_PROVIDER',
   }
