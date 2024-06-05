@@ -1,6 +1,6 @@
 import { CheckResponse, PassFortError, ExternalResource, Result, PassFortWarning, Decision, ResourceType } from '../types/OTS_CC_CheckResponse.js';
 
-export const build_OTS_CC_CheckResponse = (result: Result, warnings: PassFortWarning[], errors: PassFortError[], external_resources: ExternalResource, provider_data: string) => {
+export const build_OTS_CC_CheckResponse = (result: Result, warnings: PassFortWarning[], errors: PassFortError[], external_resources: ExternalResource, provider_data: string): CheckResponse => {
     const response: CheckResponse = {
         provider_data: provider_data,
         warnings: warnings,
@@ -17,7 +17,7 @@ export const build_OTS_CC_CheckResponse = (result: Result, warnings: PassFortWar
       return response;
 };
 
-export const build_OTS_CC_ExternalResource = (type: ResourceType, url: string, id: string, label: string) => {
+export const build_OTS_CC_ExternalResource = (type: ResourceType, url: string, id: string, label: string): ExternalResource => {
     const external_resources: ExternalResource = {
         type: type,
         url: url,
@@ -28,7 +28,7 @@ export const build_OTS_CC_ExternalResource = (type: ResourceType, url: string, i
       return external_resources;
 }
 
-export const build_OTS_CC_Result = (decision: Decision, summary: string) => {
+export const build_OTS_CC_Result = (decision: Decision, summary: string): Result => {
     const result: Result = {
         decision: decision,
         summary: summary,
