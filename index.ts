@@ -6,3 +6,4 @@ export * from './formatters/OTS_CC_helpers';
 export * from './formatters/validate_signature.helpers';
 export * from './filters/passfort.app_exception';
 export * from './formatters/auth.helpers';
+export * from './formatters/metadata.helpers';
