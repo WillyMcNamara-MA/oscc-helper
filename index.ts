@@ -5,4 +5,4 @@ export * from './types/OTS_CC_CheckResponse';
 export * from './formatters/OTS_CC_helpers';
 export * from './formatters/validate_signature.helpers';
 export * from './types/passfort.signature_validation.types';
-export * from './formatters/validate_signature.helpers';
+export * from './formatters/auth_token.helpers';
