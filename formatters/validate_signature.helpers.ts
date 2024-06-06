@@ -73,6 +73,11 @@ export const validateIFrameSignature = (version: number,
   }
 
   export const generateSignedAccessToken = async (auditee_id: string, id: string, secretKey: string, expirationTime: string): Promise<AsyncAccessTokenType> => {
+    /*
+    I think it's worth updating the arguments here to include an Interface for 
+    additional properties a user may want to add to the JWT. This is something 
+    we do in other checks for instance. 
+    */
     return {
         access_token: new Promise((resolve, reject) => {
             jwt.sign(
