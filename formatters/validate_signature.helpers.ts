@@ -24,7 +24,7 @@ export const validateIFrameSignature = (version: number,
     signature: string, 
     url: string, 
     fullUrl: string, 
-    key: string) => {
+    key: string): void => {
     if (
       version === undefined ||
       valid_until === undefined ||
@@ -91,7 +91,7 @@ export const validateIFrameSignature = (version: number,
     };
   }
 
-  export const generateRedirectHTML = (access_token: Promise<string>, externalUrl: string, id: string) => {
+  export const generateRedirectHTML = (access_token: Promise<string>, externalUrl: string, id: string): string => {
     /*
     The access token can be generated using the generateSignedAccessToken function.
     The external URL is the URL that the iFrame or LINK will redirect to.
