@@ -61,7 +61,7 @@ export type CheckTemplate = {
     type: CheckTemplateType;
   };
   
-export type OTS_CC_CheckConfig = {
+export type OTS_CC_CheckConfigType = {
     check_type: CheckType;
     check_template: CheckTemplate;
     pricing: Pricing;
