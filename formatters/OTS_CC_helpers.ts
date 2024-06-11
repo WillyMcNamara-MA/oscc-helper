@@ -1,8 +1,8 @@
-import { CheckResponse, PassFortError, ExternalResource, Result, PassFortWarning, Decision, ResourceType, DemoResultType } from '../types/OTS_CC_CheckResponse.types.js';
+import { OTS_CC_CheckResponse, PassFortError, ExternalResource, Result, PassFortWarning, Decision, ResourceType, DemoResultType } from '../types/OTS_CC_CheckResponse.types.js';
 import { InvalidCredentials, InvalidResponse, ProviderConnectionError, ProviderError, UnsupportedDemoResult } from '../types/passfort.app_exception.types.js';
 
 export const build_OTS_CC_CheckResponse = (result: Result, warnings: PassFortWarning[], errors: PassFortError[], external_resources: ExternalResource, provider_data: string): CheckResponse => {
-    const response: CheckResponse = {
+    const response: OTS_CC_CheckResponse = {
         provider_data: provider_data,
         warnings: warnings,
         errors: errors,
