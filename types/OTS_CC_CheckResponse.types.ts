@@ -32,7 +32,7 @@ export class PassFortWarning {
     summary: string;
   }
   
-  export class CheckResponse {
+  export class OTS_CC_CheckResponse {
       provider_data: string;
       warnings: PassFortWarning[];
       errors: PassFortError[];
