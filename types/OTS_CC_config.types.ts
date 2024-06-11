@@ -16,7 +16,14 @@ export type Credentials = {
     fields: Field[];
   };
   
-export type FieldTypeConfig = "boolean" | "number" | "string";
+export type FieldTypeConfig = "boolean"
+| "number"
+| "string"
+| "set"
+| "map"
+| "password"
+| "composite"
+| "MultiSelect";
   
 export type Option = {
     label: string;
@@ -33,9 +40,9 @@ export type Rule = {
   
 export type ConfigField = {
     type: FieldTypeConfig;
-    label?: string;
+    label: string;
     subtext?: string;
-    name?: string;
+    name: string;
     default?: any;
     options?: Option[];
     min_value?: number;
@@ -46,7 +53,7 @@ export type ConfigField = {
     fields?: any;
     items?: any;
     keys?: any;
-  };
+  } | [];
   
 export type Config = {
     fields: ConfigField[];
